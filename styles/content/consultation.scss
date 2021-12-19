@@ -1,0 +1,238 @@
+.consultstion_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../images/background_house.png');
+    background-repeat: no-repeat;
+    height: 875px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    z-index: 2;
+
+    @media screen and(max-width: 520px) {
+        height: 1000px;
+    }
+
+    &::after {
+        position: absolute;
+        right: 120px;
+        top: 65px;
+        content: '';
+        background-image: url('../../images/man.png');
+        width: 658px;
+        height: 817px;
+        z-index: 10;
+
+        @media screen and(max-width: 1600px) {
+            display: none;
+        }
+    }
+
+    &__info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 958px;
+        margin-left: 272px;
+        padding: 0 20px;
+        z-index: 10;
+
+        @media screen and(max-width: 1600px) {
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        &_title {
+            font-family: $base-font-famaly;
+            font-weight: 750;
+            font-size: 56px;
+            line-height: 69px;
+            letter-spacing: 0.04em;
+            color: $base-color-text-black;
+            margin: 0;
+            margin-bottom: 50px;
+
+            @media screen and(max-width: 720px) {
+                text-align: center;
+                font-size: 35px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+.cost {
+    display: flex;
+
+    @media screen and(max-width: 1720px) {
+        flex-direction: column;
+    }
+
+    @media screen and(max-width: 1600px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @media screen and(max-width: 720px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__calculate {
+        width: 100%;
+        max-width: 479px;
+
+        @media screen and(max-width: 1720px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        @media screen and(max-width: 720px) {
+            align-items: center;
+        }
+
+        &_info {
+            font-family: $base-font-famaly;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 0.04em;
+            color: $base-color-text-black;
+            margin: 0;
+
+            @media screen and(max-width: 720px) {
+                text-align: center;
+            }
+        }
+
+        &_button {
+            background: #FFD900;
+            border-radius: 6px;
+            border: none;
+            padding: 16px 32px;
+            font-family: $base-font-famaly;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            color: $base-color-text-black;
+            margin-top: 100px;
+            cursor: pointer;
+
+            @media screen and(max-width: 520px) {
+                font-size: 20px;
+             }
+        }
+    }
+
+    &__consultation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 0;
+        background: rgba(57, 67, 94, 0.2);
+        backdrop-filter: blur(24px);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 310px;
+        height: 262px;
+        margin-left: 52px;
+
+        @media screen and(max-width: 1720px) {
+            margin-left: 5px;
+        }
+
+        &__title {
+            font-family: $base-font-famaly;
+            font-weight: 750;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $base-color-text-black;
+            margin: 0;
+
+            @media screen and(max-width: 520px) {
+               font-size: 14px;
+            }
+        }
+
+        &_text {
+            font-family: $base-font-famaly;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: $base-color-text-black;
+
+            @media screen and(max-width: 520px) {
+                font-size: 12px;
+             }
+        }
+    }
+}
+
+.select_district {
+    position: relative;
+    padding: 9px 16px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    max-width: 250px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.styled-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+   
+    &::after {
+        position: absolute;
+        right: 38px;
+        top: 13px;
+        content: '';
+        background-image: url('../../images/arrow.png');
+        background-size: contain;
+        width: 14px;
+        height: 8px;
+    }
+}
+
+.number_phone {
+    @extend .select_district;
+    max-width: 220px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.white_back {
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(180.17deg, #FFFFFF 6.36%, rgba(255, 255, 255, 0) 55.09%, #FFFFFF 98.08%), rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    height: 875px;
+    width: 100%;
+
+    @media screen and(max-width: 520px) {
+        height: 1000px;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

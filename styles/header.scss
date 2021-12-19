@@ -1,0 +1,135 @@
+@import "./variabels.scss";
+@import "./mixin.scss";
+
+header {
+    background: #EDF6FF;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
+    padding: 20px 20px;
+
+    @media screen and(max-width: 1180px) {
+        padding: 40px 0;
+    }
+
+    @media screen and(max-width: 520px) {
+        min-height: 295px;
+    }
+}
+
+.header_content {
+   @include base-style-wrapper;
+
+    @media screen and(max-width: 1180px) {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 250px;
+    }
+
+}
+
+.nav_head {
+    flex-grow: 1;
+
+    @media screen and(max-width: 1180px) {
+        order: 3;
+        max-height: 50px;
+        width: 100%;
+    }
+
+    @media screen and(max-width: 520px) {
+        height: 180px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+
+        @media screen and(max-width: 520px) {
+            flex-direction: column;
+        } 
+
+        &_item {
+            font-family: $base-font-famaly;
+            font-weight: 450;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.04em;
+            color: $base-color-text-black;
+            border-bottom: 1.5px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            @media screen and(max-width: 720px) {
+                font-size: 18px;
+            }
+
+            @media screen and(max-width: 520px) {
+                margin: 0 auto;
+                width: fit-content;
+            }
+
+            &:hover {
+                border-bottom: 1.5px solid #FFC400;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+.phone {
+    font-family: $base-font-famaly;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #FFD900;
+    border-radius: 6px;
+
+    @media screen and(max-width: 1180px) {
+        order: 2;
+    }
+
+    &_number {
+        font-weight: 750;
+        font-size: 24px;
+        line-height: 29px;
+        color: $base-color-text-black;
+
+        @media screen and(max-width: 720px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.logo {
+    @media screen and(max-width: 720px) {
+        height: 80px;
+        width: 160px;
+    }
+}
+
+.arrow {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 10px;
+        right: -21px;
+        content: '';
+        width: 14px;
+        height: 8px;
+        background-image: url('../images/arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        &::after {
+            transform: rotate(180deg);
+            transition: all 0.3s ease;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import "./variabels.scss";
+@import "./content/consultation.scss";
+@import "./content/our_sevice.scss";
+@import "./content/fiveSteps.scss";
+@import "./content/contact_us.scss";
+
+section {
+  display: flex;
+  flex-direction: column;
+}

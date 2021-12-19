@@ -1,0 +1,23 @@
+@import './header.scss';
+@import './footer.scss';
+@import './content.scss';
+@import './content/our_works.scss';
+@import './content/cost_servers.scss';
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src:
+         url('../public/fonts/AvenirNextCyr-Bold.woff') format('woff'),
+         url('../public/fonts/AvenirNextCyr-Regular.woff') format('woff'),
+         url('../public/fonts/Avenir_Next_Cyr_Medium.ttf') format('woff')
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Avenir Next Cyr, Arial, Helvetica, sans-serif;
+}
