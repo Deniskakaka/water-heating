@@ -17,13 +17,14 @@
 
     &::after {
         position: absolute;
-        right: 120px;
+        right: 90px;
         top: 65px;
         content: '';
         background-image: url('../../images/man.png');
         width: 658px;
         height: 817px;
         z-index: 10;
+
 
         @media screen and(max-width: 1600px) {
             display: none;
@@ -67,7 +68,7 @@
 .cost {
     display: flex;
 
-    @media screen and(max-width: 1720px) {
+    @media screen and(max-width: 1820px) {
         flex-direction: column;
     }
 
@@ -143,8 +144,9 @@
         height: 262px;
         margin-left: 52px;
 
-        @media screen and(max-width: 1720px) {
+        @media screen and(max-width: 1820px) {
             margin-left: 5px;
+            margin-top: 20px;
         }
 
         &__title {

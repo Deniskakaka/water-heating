@@ -21,3 +21,20 @@ body {
     padding: 0;
     font-family: Avenir Next Cyr, Arial, Helvetica, sans-serif;
 }
+
+.validation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__error {
+        position: absolute;
+        width: 250px;
+        bottom: -35px;
+        font-size: 12px;
+        color: #ffffff;
+        text-align: center;
+    }
+}
