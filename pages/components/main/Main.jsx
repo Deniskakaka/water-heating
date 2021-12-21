@@ -17,7 +17,7 @@ const Main = () => {
     const tabName = (e) => {
         setName(e.target.value);
     }
-    console.log(validForm)
+    
     const tabNumber = (e) => {
         setNumberPhone(e.target.value);
     }

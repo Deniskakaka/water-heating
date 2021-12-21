@@ -34,24 +34,18 @@ const Validation = ({ children, phone, error, width, district, bottom, setValidF
            }
        }
        if (name) {
+         if (validForm.name === '' && children.props.value.length > 1) {
+            setValidForm({
+            ...validForm,
+            name: true
+            }); 
+         }
          if (children.props.value === '') {
             setValid(false);
-            if (validForm.name === '') {
-                setValidForm({
-                ...validForm,
-                name: true
-                }); 
-            }
          }
          else if (children.props.value !== '' && children.props.value.match(nameValid) !== null && children.props.value.length > 1) setValid(true);
          else {
             setValid(false);
-            if (validForm.name === '') {
-                setValidForm({
-                ...validForm,
-                name: true
-                }); 
-            }
          } 
        }
     } , [children, children.props.value, district, listValidDistrict, name, nameValid, phone, phoneno, setValidForm, valid, validForm]);
