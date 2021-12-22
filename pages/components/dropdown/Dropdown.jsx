@@ -9,7 +9,7 @@ const Dropdown = ({ arrayItem = [], index, open, color }) => {
                     className="dropdown_list_item" 
                     key={i} 
                     style={{
-                        marginTop: i === 0 && '20px', 
+                        marginTop: i === 0 && '10px', 
                         color: color, 
                         fontWeight: color === '#FFD900' && '750'}
                     }>

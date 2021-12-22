@@ -90,6 +90,7 @@ footer {
     max-height: 0;
     transition: max-height 0.15s ease-out;
     overflow: hidden;
+    z-index: 20;
 
     @media screen and(max-width: 1180px) {
         position: relative;
@@ -100,6 +101,7 @@ footer {
         line-height: 17px;
         font-family: $base-font-famaly;
         margin-bottom: 4px;
+        margin-top: 5px;
 
         @media screen and(max-width: 720px) {
             font-size: 12px;
